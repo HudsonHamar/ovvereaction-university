@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opinion | Overreaction University</title>
+  <meta name="description" content="Read the latest opinions from Overreaction University.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="assets/logo.png" alt="Overreaction University">
+        <span class="nav-brand">Overreaction University</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#episodes">Episodes</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/opinions.html" class="active">Opinions</a></li>
+        <li><a href="/#listen" class="nav-cta">Listen Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== POST CONTENT ===== -->
+  <div class="post-page">
+    <div class="post-container">
+
+      <a href="/opinions.html" class="back-link">← Back to Opinions</a>
+
+      <div id="post-loading" class="op-loading">
+        <div class="op-spinner"></div>
+        <p>Loading...</p>
+      </div>
+
+      <article id="post-content" style="display:none;">
+        <header id="post-header" class="post-header"></header>
+        <div id="video-embed" class="video-embed-wrapper"></div>
+        <div id="post-body" class="post-body"></div>
+      </article>
+
+      <div id="post-error" class="post-error" style="display:none;">
+        <p>Post not found. <a href="/opinions.html">← Back to Opinions</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Overreaction University">
+        <p>Overreaction University Podcast</p>
+        <span>EST. 2026</span>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="/#episodes">Episodes</a>
+        <a href="/#about">About</a>
+        <a href="/opinions.html">Opinions</a>
+        <a href="/#listen">Listen</a>
+      </div>
+      <div class="footer-listen">
+        <h4>Listen On</h4>
+        <a href="https://open.spotify.com/show/3itZNypv13mWuxM0nBaZKx?si=5e8c8da0446a4196" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://podcasts.apple.com/us/podcast/the-overreaction-university-podcast/id1869741491" target="_blank" rel="noopener">Apple Podcasts</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter / X" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Overreaction University Podcast. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const PROJECT_ID = 'rs5bgdcl';
+    const DATASET = 'production';
+
+    // Portable Text → HTML renderer
+    function renderPortableText(blocks) {
+      if (!blocks || !blocks.length) return '';
+      return blocks.map(block => {
+        if (block._type !== 'block') return '';
+        const content = (block.children || []).map(span => {
+          let text = (span.text || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+          if (span.marks && span.marks.includes('strong')) text = `<strong>${text}</strong>`;
+          if (span.marks && span.marks.includes('em')) text = `<em>${text}</em>`;
+          return text;
+        }).join('');
+        switch (block.style) {
+          case 'h2': return `<h2>${content}</h2>`;
+          case 'h3': return `<h3>${content}</h3>`;
+          case 'blockquote': return `<blockquote>${content}</blockquote>`;
+          default: return content ? `<p>${content}</p>` : '';
+        }
+      }).join('\n');
+    }
+
+    // Video embed generator
+    function getVideoEmbed(url) {
+      if (!url) return '';
+      const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
+      if (ytMatch) {
+        return `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${ytMatch[1]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+      }
+      const ttMatch = url.match(/tiktok\.com\/@[^/]+\/video\/(\d+)/);
+      if (ttMatch) {
+        return `<div class="video-embed tiktok-wrap"><blockquote class="tiktok-embed" cite="${url}" data-video-id="${ttMatch[1]}" style="max-width:605px;min-width:325px;"><section></section></blockquote><script async src="https://www.tiktok.com/embed.js"><\/script></div>`;
+      }
+      return '';
+    }
+
+    async function loadPost(slug) {
+      const query = encodeURIComponent(`*[_type == "post" && slug.current == "${slug}"][0]`);
+      const url = `https://${PROJECT_ID}.apicdn.sanity.io/v2021-10-21/data/query/${DATASET}?query=${query}`;
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        return data.result || null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      return new Date(dateStr).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+
+    async function init() {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+      const loading = document.getElementById('post-loading');
+      const content = document.getElementById('post-content');
+      const error = document.getElementById('post-error');
+
+      if (!slug) {
+        loading.style.display = 'none';
+        error.style.display = 'block';
+        return;
+      }
+
+      const post = await loadPost(slug);
+      loading.style.display = 'none';
+
+      if (!post) {
+        error.style.display = 'block';
+        return;
+      }
+
+      // Update page title
+      document.title = `${post.title} | Overreaction University`;
+
+      // Render header
+      document.getElementById('post-header').innerHTML = `
+        <div class="post-meta-top">
+          ${post.category ? `<span class="op-category">${post.category}</span>` : ''}
+        </div>
+        <h1 class="post-title">${post.title}</h1>
+        <div class="post-byline">
+          <span>By ${post.author || 'OU Staff'}</span>
+          ${post.publishedAt ? `<span class="byline-dot">·</span><span>${formatDate(post.publishedAt)}</span>` : ''}
+        </div>
+        <div class="post-divider"></div>
+      `;
+
+      // Video embed
+      if (post.videoUrl) {
+        document.getElementById('video-embed').innerHTML = getVideoEmbed(post.videoUrl);
+      }
+
+      // Post body
+      if (post.body) {
+        document.getElementById('post-body').innerHTML = renderPortableText(post.body);
+      } else {
+        document.getElementById('post-body').innerHTML = '<p><em>No content yet.</em></p>';
+      }
+
+      content.style.display = 'block';
+    }
+
+    init();
+  </script>
+</body>
+</html>
