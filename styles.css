@@ -995,6 +995,15 @@ ul {
   .footer-listen {
     align-items: center;
   }
+
+  /* Inner pages */
+  .page-hero {
+    padding: calc(var(--nav-h) + 2rem) 1.5rem 2.5rem;
+  }
+
+  .opinions-section {
+    padding: 3.5rem 1.5rem 4rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1014,6 +1023,41 @@ ul {
   }
 
   :root { --nav-h: 62px; }
+
+  /* Hide brand name on very small screens — logo stays */
+  .nav-brand {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 0 1.25rem;
+  }
+
+  /* Inner page padding tighten */
+  .page-hero {
+    padding: calc(var(--nav-h) + 1.25rem) 1.25rem 2rem;
+  }
+
+  .opinions-section {
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .opinion-card {
+    padding: 1.25rem;
+  }
+
+  .post-page {
+    padding: calc(var(--nav-h) + 2rem) 1.25rem 4rem;
+  }
+
+  .post-body {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .post-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
 }
 
 
@@ -1315,6 +1359,7 @@ ul {
 /* Responsive */
 @media (max-width: 600px) {
   .opinions-grid { grid-template-columns: 1fr; }
-  .op-footer { flex-direction: column; align-items: flex-start; }
+  .op-footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .op-read-btn { width: 100%; text-align: center; justify-content: center; }
   .post-page { padding-top: calc(var(--nav-h) + 2.5rem); }
 }

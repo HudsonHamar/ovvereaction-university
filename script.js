@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
   const hero   = document.getElementById('hero');
 
+  // On inner pages (no hero), navbar is always dark
+  const isInnerPage = !hero;
+
   const onScroll = () => {
-    if (window.scrollY > 60) {
+    if (isInnerPage || window.scrollY > 60) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
